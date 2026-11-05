@@ -1,0 +1,24 @@
+{
+  "title": "France Company Leads Finder",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "query": { "title": "Keyword (optional)", "type": "string", "editor": "textfield", "description": "Free text matched on company name and trade names, e.g. \"boulangerie\", \"garage\", \"plombier\".", "prefill": "" },
+    "nafCodes": { "title": "Activity codes (NAF/APE)", "type": "array", "editor": "stringList", "description": "One or more NAF codes, e.g. 56.10A (restaurants), 96.02A (hairdressers), 96.02B (beauty salons), 45.20A (car repair), 43.22A (plumbing), 68.31Z (real estate agencies).", "prefill": ["96.02A"] },
+    "section": { "title": "Activity section (A–U)", "type": "string", "editor": "textfield", "description": "Optional broad INSEE section letter, e.g. I = accommodation & food, F = construction, G = retail & trade." },
+    "departments": { "title": "Departments", "type": "array", "editor": "stringList", "description": "Department numbers, e.g. 75, 92, 69, 13, 2A.", "prefill": ["75"] },
+    "postalCodes": { "title": "Postal codes", "type": "array", "editor": "stringList", "description": "Optional list of 5-digit postal codes." },
+    "sizeCodes": { "title": "Employee ranges (INSEE codes)", "type": "array", "editor": "stringList", "description": "Optional INSEE codes: 00=0, 01=1-2, 02=3-5, 03=6-9, 11=10-19, 12=20-49, 21=50-99, 22=100-199, 31=200-249, 32=250-499, 41=500-999 …" },
+    "companyCategory": { "title": "Company category", "type": "string", "editor": "select", "enum": ["", "PME", "ETI", "GE"], "enumTitles": ["Any", "SME (PME)", "Mid-size (ETI)", "Large (GE)"], "default": "" },
+    "revenueMin": { "title": "Minimum revenue (€)", "type": "integer", "editor": "number", "description": "Only companies with published accounts above this revenue." },
+    "revenueMax": { "title": "Maximum revenue (€)", "type": "integer", "editor": "number" },
+    "createdAfter": { "title": "Company created after (YYYY-MM-DD)", "type": "string", "editor": "textfield", "description": "Keep only companies created on or after this date (filters the returned pages)." },
+    "onlyRGE": { "title": "Only RGE-certified (energy renovation)", "type": "boolean", "default": false },
+    "onlyQualiopi": { "title": "Only Qualiopi-certified (training)", "type": "boolean", "default": false },
+    "onlyESS": { "title": "Only social & solidarity economy (ESS)", "type": "boolean", "default": false },
+    "onlyActive": { "title": "Only active companies and branches", "type": "boolean", "default": true },
+    "excludeSoleTraders": { "title": "Exclude sole traders (recommended, GDPR)", "type": "boolean", "default": true, "description": "Sole traders are natural persons; they are excluded by default." },
+    "outputMode": { "title": "One row per", "type": "string", "editor": "select", "enum": ["establishments", "companies"], "enumTitles": ["Local branch matching your filters (best for local prospecting)", "Company (headquarters address)"], "default": "establishments" },
+    "maxResults": { "title": "Max results", "type": "integer", "editor": "number", "minimum": 1, "maximum": 10000, "default": 100 }
+  }
+}

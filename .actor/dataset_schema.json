@@ -1,0 +1,15 @@
+{
+  "actorSpecification": 1,
+  "views": {
+    "overview": {
+      "title": "Leads",
+      "transformation": { "fields": ["name", "tradeNames", "nafCode", "city", "postalCode", "address", "employees", "revenue", "companyCreated", "siren", "siret", "annuaireUrl"] },
+      "display": { "component": "table", "properties": {
+        "name": { "label": "Company" }, "tradeNames": { "label": "Trade names" }, "nafCode": { "label": "NAF" },
+        "city": { "label": "City" }, "postalCode": { "label": "Postal code" }, "address": { "label": "Address" },
+        "employees": { "label": "Employees" }, "revenue": { "label": "Revenue €", "format": "number" },
+        "companyCreated": { "label": "Created" }, "siren": { "label": "SIREN" }, "siret": { "label": "SIRET" },
+        "annuaireUrl": { "label": "Official page", "format": "link" } } }
+    }
+  }
+}

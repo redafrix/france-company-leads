@@ -1,0 +1,10 @@
+{
+  "actorSpecification": 1,
+  "name": "france-company-leads",
+  "title": "France Company Leads Finder (SIRENE, official API)",
+  "description": "Find French companies by activity (NAF code), department, postal code, size, revenue or RGE/Qualiopi label. Official government data, no proxy, local branch addresses and GPS. Companies that opted out of prospecting are excluded.",
+  "version": "1.0",
+  "dockerfile": "../Dockerfile",
+  "input": "./input_schema.json",
+  "storages": { "dataset": "./dataset_schema.json" }
+}
