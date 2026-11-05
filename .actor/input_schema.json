@@ -51,13 +51,11 @@
       "type": "string",
       "editor": "select",
       "enum": [
-        "",
         "PME",
         "ETI",
         "GE"
       ],
       "enumTitles": [
-        "Any",
         "SME (PME)",
         "Mid-size (ETI)",
         "Large (GE)"
